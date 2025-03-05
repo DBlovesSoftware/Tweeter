@@ -37,7 +37,7 @@
         .content {
             padding: 50px;
         }
-        #map {
+        gmp-map {
             width: 100%;
             height: 400px;
         }
@@ -59,18 +59,7 @@
         <p>Discover the best places in Manchester and explore exciting locations.</p>
     </div>
     
-    <div id="map"></div>
+    <?php include "resources/map.php"; ?>
     
-    <script>
-        function initMap() {
-            var manchester = { lat: 53.483959, lng: -2.244644 };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: manchester
-            });
-            var marker = new google.maps.Marker({ position: manchester, map: map });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHyk9EsbgFMb2aq0bgYQRwLKgZszHaE9g&callback=initMap"></script>
-</body>
+    </body>
 </html>
