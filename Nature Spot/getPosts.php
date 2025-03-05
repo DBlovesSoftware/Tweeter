@@ -1,8 +1,5 @@
 <?php
-$user = 'root';
-$pass = '';
-$dbName = 'naturespotter';
-$db = new mysqli('localhost', $user, $pass, $dbName);
+include "resources/database.php";
 
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
